@@ -1,8 +1,6 @@
-<h1>Oliver Sacks Books Collection</h1>
+<h2 style="text-align: center;">Create new todo</h2>
+<app-todo-list [todos]="todos$ | async" (add)="onAdd($event)" (retrieveAllTodos)="onGetAll($event)" (hideAllTodos)="onHideAll()"></app-todo-list>
 
-<h2>Books</h2>
-<app-book-list class="book-list" [books]="books$ | async" (add)="onAdd($event)"></app-book-list>
-
-<h2>My Collection</h2>
-<app-book-collection class="book-collection" [books]="bookCollection$ | async" (remove)="onRemove($event)">
-</app-book-collection>
+<h2 style="text-align: center;">My todos</h2>
+<app-todo-collection [todos]="todoCollection$ | async" (remove)="onRemove($event)" (update)="onUpdate($event)">
+</app-todo-collection>

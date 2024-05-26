@@ -1,10 +1,37 @@
-<div 
-  class="book-item"
-  *ngFor="let book of books"
->
-  <p>{{book?.dueDate}}</p><span> by {{book}}</span>
-  <button
-    (click)="remove.emit(book?.id)"
-    data-test="remove-button"
-  >Remove from Collection</button>
-</div>
+<ng-container *ngIf="!editMode">
+  <div class="todo-container todo-showcase-container" *ngFor="let todo of todos">
+    <div class="showcase-element">{{todo?.creationDate}}</div>
+    <div class="showcase-element description">{{todo?.description}}</div>
+    <div class="showcase-element">{{todo?.dueDate}}</div>
+    <div class="showcase-element">{{todo?.completed}}</div>
+    <div class="showcase-element">{{todo?.completionDate}}</div>
+    <button (click)="editTodo(todo)">Edit</button>
+    <button (click)="remove.emit(todo)" data-test="remove-button">Remove</button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="editMode">
+  <form [formGroup]="editTodoForm" #f="ngForm" class="todo-container" novalidate>
+    <div>
+      <label>Creation date <input type="text" formControlName="creationDate" /></label>
+      <div class="error-message"
+        *ngIf="editTodoForm.controls['creationDate'].hasError('required')
+      && editTodoForm.controls['creationDate'].touched || activeForm && editTodoForm.controls['creationDate'].hasError('required')">
+        This field is required
+      </div>
+    </div>
+    <div>
+      <label>Description <input type="text" formControlName="description" /></label>
+      <div class="error-message"
+        *ngIf="editTodoForm.controls['description'].hasError('required')
+      && editTodoForm.controls['description'].touched || activeForm && editTodoForm.controls['description'].hasError('required')">
+        This field is required
+      </div>
+    </div>
+    <label>Due date <input type="text" formControlName="dueDate" /></label>
+    <label>Completed <input type="checkbox" formControlName="completed" /></label>
+    <label>Completion date <input type="text" formControlName="completionDate" /></label>
+    <button (click)="updateTodo()">Update</button>
+    <button (click)="cancelEdit()">Cancel</button>
+  </form>
+</ng-container>

@@ -1,16 +1,16 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
 import { Todo } from '../todo-list/todo.model';
 
-export const selectBooks = createFeatureSelector<ReadonlyArray<Todo>>('books');
+export const selectTodos = createFeatureSelector<ReadonlyArray<Todo>>('todos');
 
 export const selectCollectionState = createFeatureSelector<
-  ReadonlyArray<string>
+  ReadonlyArray<Todo>
 >('collection');
 
-export const selectBookCollection = createSelector(
-  selectBooks,
+export const selectTodoCollection = createSelector(
+  selectTodos,
   selectCollectionState,
-  (books, collection) => {
-    return collection.map((id) => books.find((book) => book.id === id));
+  (todos, collection) => {
+    return collection.map((el) => todos.find((todo) => todo.id === el.id));
   }
 );

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+.todo-container {
+    display: flex;
+    align-items: baseline;
+    background-color: #f5f6fa;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    outline: lightslategrey 1px solid;
+
+    label {
+        padding: 0 15px;
+    }
+
+    .showcase-element {
+        width: 15%;
+        text-align: center;
+        outline: 1px black solid;
+        margin-right: 1px;
+    }
+
+    .description {
+        flex-grow: 2;
+        overflow-wrap: break-word;
+    }
+}
+
+input,
+label {
+    display: block;
+}
+
+.error-message {
+    color: red;
+}
+
+button {
+    align-self: center;
+    background-color: lightgray;
+    border: darkgray 1px solid;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 30px;
+}

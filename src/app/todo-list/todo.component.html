@@ -1,10 +1,26 @@
-<div
-  class="book-item"
-  *ngFor="let book of books"
->
-  <p>{{book}}</p><span> by {{book}}</span>
-  <button
-    (click)="add.emit(book.id)"
-    data-test="add-button"
-  >Add to Collection</button>
+<form [formGroup]="newTodoForm" class="todo-container" novalidate>
+  <div>
+    <label>Creation date <input type="text" formControlName="creationDate" /></label>
+    <div class="error-message"
+      *ngIf="newTodoForm.controls['creationDate'].hasError('required')
+    && newTodoForm.controls['creationDate'].touched || activeForm && newTodoForm.controls['creationDate'].hasError('required')">
+      This field is required
+    </div>
+  </div>
+  <div>
+    <label>Description <input type="text" formControlName="description" /></label>
+    <div class="error-message"
+      *ngIf="newTodoForm.controls['description'].hasError('required')
+    && newTodoForm.controls['description'].touched || activeForm && newTodoForm.controls['description'].hasError('required')">
+      This field is required
+    </div>
+  </div>
+  <label>Due date <input type="text" formControlName="dueDate" /></label>
+  <label>Completed <input type="checkbox" formControlName="completed" /></label>
+  <label>Completion date <input type="text" formControlName="completionDate" /></label>
+  <button (click)="addNewTodo()">Add todo</button>
+</form>
+<div class="actions-container">
+  <button (click)="getAll()">Show all todos</button>
+  <button (click)="hideAllTodos.emit()">Hide all todos</button>
 </div>

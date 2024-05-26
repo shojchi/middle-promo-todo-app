@@ -1,17 +1,24 @@
 import { createAction, props } from '@ngrx/store';
 import { Todo } from '../todo-list/todo.model';
 
-export const addBook = createAction(
-    '[Todo List] Add Book',
-    props<{ bookId: string }>()
+export const add = createAction(
+    '[Todo List] Add New Todo',
+    props<{ todo: Todo }>()
 );
 
-export const removeBook = createAction(
-    '[Todo Collection] Remove Book',
-    props<{ bookId: string }>()
+export const remove = createAction(
+    '[Todo Collection] Remove Todo',
+    props<{ todo: Todo }>()
 );
 
-export const retrievedBookList = createAction(
-    '[Todo List] Retrieve Books Success',
-    props<{ books: ReadonlyArray<Todo> }>()
+export const update = createAction(
+    '[Todo Collection] Update Todo',
+    props<{ todo: Todo }>()
 );
+
+export const retrievedAllTodos = createAction(
+    '[Todo List] Retrieve All Todos',
+    props<{ todos: Todo[] }>()
+);
+
+export const hideAllTodos = createAction('[Todo List] Hide All Todos');

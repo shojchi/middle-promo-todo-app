@@ -1,39 +1,49 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import { selectBookCollection, selectBooks } from './state/todo.selector';
+import { selectTodoCollection, selectTodos } from './state/todo.selector';
 import {
-  retrievedBookList,
-  addBook,
-  removeBook,
+  add,
+  remove,
+  retrievedAllTodos,
+  hideAllTodos,
+  update,
 } from './state/todo.actions';
-import { GoogleBooksService } from './todo-list/todo.service';
+import { Todo } from './todo-list/todo.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  books$ = this.store.select(selectBooks);
-  bookCollection$ = this.store.select(selectBookCollection);
-  booksInit = this.booksService.getBooks();
+  todos$ = this.store.select(selectTodos);
+  todoCollection$ = this.store.select(selectTodoCollection);
 
-  onAdd(bookId: string) {
-    this.store.dispatch(addBook({ bookId }));
+  onAdd(todo: Todo) {
+    this.store.dispatch(add({ todo }));
   }
 
-  onRemove(bookId: string) {
-    this.store.dispatch(removeBook({ bookId }));
+  onRemove(todo: Todo) {
+    this.store.dispatch(remove({ todo }));
+  }
+
+  onUpdate(todo: Todo) {
+    this.store.dispatch(update({ todo }));
+  }
+
+  onGetAll(todos: Todo[]) {
+    this.store.dispatch(retrievedAllTodos({ todos }));
+  }
+
+  onHideAll() {
+    this.store.dispatch(hideAllTodos());
   }
 
   constructor(
-    private booksService: GoogleBooksService,
     private store: Store
   ) { }
 
   ngOnInit() {
-    this.store.dispatch(retrievedBookList({
-      books: this.booksInit 
-    }));
+    
   }
 }

@@ -3,6 +3,7 @@ export interface Todo {
     dueDate: string,
     creationDate: string,
     completed: boolean,
-    completeDate: string
-    id: string
+    completionDate: string
+    id: string | number
 }
+//TODO: change id to number
