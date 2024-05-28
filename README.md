@@ -22,10 +22,10 @@ List the software and tools you need to install before setting up the project.
 A step-by-step series of examples that tell you how to get the development environment running.
 
 1. Clone the repository:
- `git clone https://github.com/shojchi/middle-promo-todo-app.git`
- `cd project-name`
+ - `git clone https://github.com/shojchi/middle-promo-todo-app.git`
+ - `cd project-name`
 2. Install the dependencies:
- `npm install`
+ - `npm install`
 
 ### Running the Application
 Run `ng serve` for a dev server. The application will be available at http://localhost:4200/. The application will automatically reload if you change any of the source files.
