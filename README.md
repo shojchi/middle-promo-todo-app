@@ -15,14 +15,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Prerequisites
 List the software and tools you need to install before setting up the project.
 
-**Node.js (v14.x or higher)**
-**Angular CLI (v12.x or higher)**
+- **Node.js (v14.x or higher)**
+- **Angular CLI (v12.x or higher)**
 
 ### Installation
 A step-by-step series of examples that tell you how to get the development environment running.
 
 1. Clone the repository:
- `git clone https://github.com/yourusername/project-name.git`
+ `git clone https://github.com/shojchi/middle-promo-todo-app.git`
  `cd project-name`
 2. Install the dependencies:
  `npm install`
@@ -49,4 +49,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Contact
 Roman - roman.hordiichuk@sombrainc.com
 
-### Project Link: [Application Github Page](https://github.com/yourusername/project-name)
+### Project Link: [Application Github Page](https://github.com/shojchi/middle-promo-todo-app)
