@@ -1,27 +1,52 @@
 # MiddlePromoTodoApp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
 
-## Development server
+## Table of Contents
+1. Prerequisites
+2. Installation
+3. Running the Application
+4. Build
+5. Running Unit Tests
+6. Running End-to-End Tests
+7. License
+8. Contact
+9. GitHub repo link
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Prerequisites
+List the software and tools you need to install before setting up the project.
 
-## Code scaffolding
+**Node.js (v14.x or higher)**
+**Angular CLI (v12.x or higher)**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
+A step-by-step series of examples that tell you how to get the development environment running.
 
-## Build
+1. Clone the repository:
+ `git clone https://github.com/yourusername/project-name.git`
+ `cd project-name`
+2. Install the dependencies:
+ `npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Running the Application
+Run `ng serve` for a dev server. The application will be available at http://localhost:4200/. The application will automatically reload if you change any of the source files.
+> [!TIP]
+>  To run and automatically open dedicated page in browser use `ng s -o` command.
 
-## Running unit tests
+### Build
+`ng build`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The build artifacts will be stored in the dist/ directory.
 
-## Running end-to-end tests
+### Running Unit Tests
+`ng test`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Running End-to-End Tests
+`ng e2e`
 
-## Further help
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Contact
+Roman - roman.hordiichuk@sombrainc.com
+
+### Project Link: [Application Github Page](https://github.com/yourusername/project-name)
