@@ -5,56 +5,71 @@
   - Method - **GET**
   - Description: Retrieves a list of tasks
   - Response format: JSON
-  - Response data: [{
-     "description": srting,
-     "dueDate": string,
-     "creationDate": string,
-     "completed": boolean,
-     "completionDate": string,
-     'id': number,
-     }]
+  - Response data: 
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
 ## 2. Add task
   - URL: *'/add-task'_*
   - Method: **POST**
   - Description: Adds a new task based to the list
-  - Request body: [{
-     "description": srting,
-     "dueDate": string,
-     "creationDate": string,
-     "completed": boolean,
-     "completionDate": string,
-     'id': number,
-     }]
+  - Request body: 
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
   - Response format: JSON
-  - Response data: [{
-     "description": srting,
-     "dueDate": string,
-     "creationDate": string,
-     "completed": boolean,
-     "completionDate": string,
-     'id': number,
-     }]
+  - Response data: 
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
 ## 3. Update task
   - URL: *'/edit-task/{task_id}'*
   - Method: **POST**
   - Description: Updates an existing task based on id
-  - Request body: [{
-     "description": srting,
-     "dueDate": string,
-     "creationDate": string,
-     "completed": boolean,
-     "completionDate": string,
-     'id': number,
-     }]
+  - Request body: 
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
   - Response format: JSON
-  - Response data: [{
-     "description": srting,
-     "dueDate": string,
-     "creationDate": string,
-     "completed": boolean,
-     "completionDate": string,
-     'id': number,
-     }]
+  - Response data: 
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
 ## 4. Delete task
   - URL *'/'*
   - Method: **DELETE**
