@@ -64,11 +64,13 @@
   }
   - Response format: JSON
   - Response data: 
-  > [{
-  >   "description": srting,
-  >  "dueDate": string,
-  >   "creationDate": string,
-  >   "completed": boolean,
-  >   "completionDate": string,
-  >   'id': number,
-  >   }]
+  ``` 
+  [{
+    "description": srting,
+    "dueDate": string,
+    "creationDate": string,
+    "completed": boolean,
+    "completionDate": string,
+    'id': number,
+  }]
+  ```
