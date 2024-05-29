@@ -1,6 +1,6 @@
 <form [formGroup]="newTodoForm" class="todo-container" novalidate>
   <div>
-    <label>Creation date <input type="text" formControlName="creationDate" /></label>
+    <label>Creation date <input type="date" formControlName="creationDate" /></label>
     <div class="error-message"
       *ngIf="newTodoForm.controls['creationDate'].hasError('required')
     && newTodoForm.controls['creationDate'].touched || activeForm && newTodoForm.controls['creationDate'].hasError('required')">
@@ -8,16 +8,17 @@
     </div>
   </div>
   <div>
-    <label>Description <input type="text" formControlName="description" /></label>
+    <label class="text-center">Description</label> <textarea type="text" formControlName="description" rows="3"
+      cols="15"></textarea>
     <div class="error-message"
       *ngIf="newTodoForm.controls['description'].hasError('required')
     && newTodoForm.controls['description'].touched || activeForm && newTodoForm.controls['description'].hasError('required')">
       This field is required
     </div>
   </div>
-  <label>Due date <input type="text" formControlName="dueDate" /></label>
-  <label>Completed <input type="checkbox" formControlName="completed" /></label>
-  <label>Completion date <input type="text" formControlName="completionDate" /></label>
+  <label>Due date <input type="date" formControlName="dueDate" /></label>
+  <label class="flex-column">Completed <input type="checkbox" formControlName="completed" /></label>
+  <label>Completion date <input type="date" formControlName="completionDate" /></label>
   <button (click)="addNewTodo()">Add todo</button>
 </form>
 <div class="actions-container">

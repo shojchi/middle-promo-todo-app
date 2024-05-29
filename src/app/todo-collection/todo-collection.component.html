@@ -3,7 +3,7 @@
     <div class="showcase-element">{{todo?.creationDate}}</div>
     <div class="showcase-element description">{{todo?.description}}</div>
     <div class="showcase-element">{{todo?.dueDate}}</div>
-    <div class="showcase-element">{{todo?.completed}}</div>
+    <div class="showcase-element">{{todo?.completed ? 'Completed' : 'In progress'}}</div>
     <div class="showcase-element">{{todo?.completionDate}}</div>
     <button (click)="editTodo(todo)">Edit</button>
     <button (click)="remove.emit(todo)" data-test="remove-button">Remove</button>
@@ -13,7 +13,7 @@
 <ng-container *ngIf="editMode">
   <form [formGroup]="editTodoForm" #f="ngForm" class="todo-container" novalidate>
     <div>
-      <label>Creation date <input type="text" formControlName="creationDate" /></label>
+      <label>Creation date <input type="date" formControlName="creationDate" /></label>
       <div class="error-message"
         *ngIf="editTodoForm.controls['creationDate'].hasError('required')
       && editTodoForm.controls['creationDate'].touched || activeForm && editTodoForm.controls['creationDate'].hasError('required')">
@@ -21,16 +21,17 @@
       </div>
     </div>
     <div>
-      <label>Description <input type="text" formControlName="description" /></label>
+      <label class="text-center">Description</label> <textarea type="text" formControlName="description" rows="3"
+        cols="15"></textarea>
       <div class="error-message"
         *ngIf="editTodoForm.controls['description'].hasError('required')
       && editTodoForm.controls['description'].touched || activeForm && editTodoForm.controls['description'].hasError('required')">
         This field is required
       </div>
     </div>
-    <label>Due date <input type="text" formControlName="dueDate" /></label>
-    <label>Completed <input type="checkbox" formControlName="completed" /></label>
-    <label>Completion date <input type="text" formControlName="completionDate" /></label>
+    <label>Due date <input type="date" formControlName="dueDate" /></label>
+    <label class="flex-column">Completed <input type="checkbox" formControlName="completed" /></label>
+    <label>Completion date <input type="date" formControlName="completionDate" /></label>
     <button (click)="updateTodo()">Update</button>
     <button (click)="cancelEdit()">Cancel</button>
   </form>

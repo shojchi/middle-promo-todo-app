@@ -11,7 +11,6 @@ export const collectionReducer = createReducer(
     return [...state, ...todos.filter(el => !state.includes(el))];
   }),
   on(hideAllTodos, (state) => {
-    console.log(state);
     return [];
   }),
   on(add, (state, { todo }) => {

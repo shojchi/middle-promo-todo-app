@@ -4,27 +4,27 @@ import { add, remove, update } from './todo.actions';
 import { Todo } from '../todo-list/todo.model';
 
 export const initialState: ReadonlyArray<Todo> = [{
-  description: 'test description',
-  dueDate: '10 days',
-  creationDate: '03/04/2024',
+  description: 'Complete test task',
+  dueDate: '2024-05-30',
+  creationDate: '2024-03-10',
   completed: false,
-  completionDate: '13/05/2024',
+  completionDate: '2024-05-29',
   id: '1'
 },
 {
-  description: 'test description2',
-  dueDate: '11 days',
-  creationDate: '04/02/2024',
+  description: 'Home chores',
+  dueDate: '2024-02-03',
+  creationDate: '2024-02-02',
   completed: true,
-  completionDate: '10/03/2024',
+  completionDate: '2024-02-03',
   id: '2'
 },
 {
-  description: 'test description3',
-  dueDate: '12 days',
-  creationDate: '01/08/2024',
+  description: 'Read 15 pages of book',
+  dueDate: '2024-05-11',
+  creationDate: '2024-05-10',
   completed: true,
-  completionDate: '10/03/2024',
+  completionDate: '2024-05-13',
   id: '3'
 }];
 

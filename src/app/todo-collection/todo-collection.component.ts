@@ -37,7 +37,6 @@ export class TodoCollectionComponent {
       id: todo?.id
     })
   }
-  //TODO: add mask for Dates
 
   updateTodo() {
     this.activeForm = true;

@@ -27,7 +27,6 @@ export class TodoListComponent {
   getAll() {
     this.retrieveAllTodos.emit(this.todos as Todo[]);
   }
-  //TODO: add mask for Dates
   
   addNewTodo() {
     this.activeForm = true;
