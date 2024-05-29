@@ -17,7 +17,7 @@
   }]
   ```
 ## 2. Add task
-  - URL: *'/add-task'_*
+  - URL: *'/add-task'*
   - Method: **POST**
   - Description: Adds a new task based to the list
   - Request body: 
@@ -46,6 +46,10 @@
 ## 3. Update task
   - URL: *'/edit-task/{task_id}'*
   - Method: **POST**
+  - Requested Payload: 
+  ```
+  {task_id: number}
+  ```
   - Description: Updates an existing task based on id
   - Request body: 
   ``` 
@@ -75,7 +79,9 @@
   - Method: **DELETE**
   - Description: Deletes an existing task based on id
   - Request body: {
+    ```
     todoId: number
+    ```
   }
   - Response format: JSON
   - Response data: 
