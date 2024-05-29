@@ -48,7 +48,7 @@
   - Method: **POST**
   - Requested Payload: 
   ```
-  {task_id: number}
+  { task_id: number }
   ```
   - Description: Updates an existing task based on id
   - Request body: 
@@ -78,11 +78,10 @@
   - URL *'/'*
   - Method: **DELETE**
   - Description: Deletes an existing task based on id
-  - Request body: {
-    ```
-    todoId: number
-    ```
-  }
+  - Request body: 
+  ```
+  { todoId: number }
+  ```
   - Response format: JSON
   - Response data: 
   ``` 
