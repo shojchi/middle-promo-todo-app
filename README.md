@@ -23,7 +23,7 @@ A step-by-step series of examples that tell you how to get the development envir
 
 1. Clone the repository:
  - `git clone https://github.com/shojchi/middle-promo-todo-app.git`
- - `cd project-name`
+ - `cd middle-promo-todo-app`
 2. Install the dependencies:
  - `npm install`
 
