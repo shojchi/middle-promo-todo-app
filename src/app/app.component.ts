@@ -19,6 +19,14 @@ export class AppComponent {
   todos$ = this.store.select(selectTodos);
   todoCollection$ = this.store.select(selectTodoCollection);
 
+  constructor(
+    private store: Store
+  ) { }
+
+  ngOnInit() {
+  }
+
+
   onAdd(todo: Todo) {
     this.store.dispatch(add({ todo }));
   }
@@ -37,13 +45,5 @@ export class AppComponent {
 
   onHideAll() {
     this.store.dispatch(hideAllTodos());
-  }
-
-  constructor(
-    private store: Store
-  ) { }
-
-  ngOnInit() {
-    
   }
 }
